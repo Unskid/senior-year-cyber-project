@@ -1,2 +1,2 @@
-3)the exe itself
-4) solve the challenge itself
+1) shoot the videos explain with a powerpoint slide
+2) deploy the project and upload this to a website

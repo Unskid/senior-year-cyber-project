@@ -14,14 +14,10 @@ include("web_config.php");
 		<!-- Header -->
 			<section id="header">
 				<header class="major">
-                    <h1>Hints</h1>
-                    <p>Every hint decreases you 5 points</p>
+                    <h1>Write Ups</h1>
+                    <p>Here there're write ups to the challenge (For Script Kids only)</p>
+                    <p><a href="hints.php">Hints</a>| <a href="index.php">Home</a> | <a href="points.php">Your points</a> | <a href="flag_submit.php">Submit a flag</a></p>
                 </header>
-                <div class="container">
-					<ul class="actions special">
-						<li><a onclick="getHint()" class="button primary scrolly">Get Hint</a></li>
-					</ul>
-				</div>
 			</section>
 
 		<!-- One -->
@@ -32,8 +28,9 @@ include("web_config.php");
 						<header class="major">
 							<h2>Flag1:</h2>
                         </header>
-						<p id="hint1">What type of exe is that? What language was it written with?</p>
-                        <p id="hint2">Is there any tool you can reverse it with?</p>
+                        <iframe src="https://www.youtube.com/embed/uagOkqjGZZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <p>Vurnability covered: Reverse engineering</p>
+                        <p>Tools used : <a href="https://www.red-gate.com/products/dotnet-development/reflector/">.netReflector</a> </p>
 					</div>
 				</div>
 			</section>
@@ -46,10 +43,10 @@ include("web_config.php");
 						<header class="major">
 							<h2>Flag2:</h2>
 						</header>
-						<p id="hint3">What happend after you fired up the exe? (The closer you look... the less you see)</p>
-                        <p id="hint4">Can you decrypt it? How?!</p>
-                        <p id="hint5">maybe you should download NotePad++...</p>
-					</div>
+                        <iframe src="https://www.youtube.com/embed/uagOkqjGZZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p>Vurnability covered: XOR keyReuse</p>
+                        <p>Tools used: <a download href="writeups/xor.py">Xor decryption tool</a></p>
+                    </div>
 				</div>
             </section>
             <section id="three" class="main special">
@@ -59,9 +56,9 @@ include("web_config.php");
 						<header class="major">
 							<h2>Flag3:</h2>
 						</header>
-						<p id="hint6">Where did you download the file?</p>
-                        <p id="hint7">You have a name and a password, but where can you use it?</p>
-                        <p id="hint8">Get a cup of coffee and let it run by itself</p>
+						<iframe src="https://www.youtube.com/embed/uagOkqjGZZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p>Vurnability covered: bot allowing </p>
+                        <p>Tools used: <a href="https://github.com/KajanM/DirBuster">Dirbuster</a> | <a download href="writeups/dirbuster.py">Custom made dirbuster tool</a> </p>
 					</div>
 				</div>
             </section>
@@ -72,10 +69,10 @@ include("web_config.php");
 						<header class="major">
 							<h2>Flag4:</h2>
 						</header>
-                        <p id="hint9">I wonder if theres any DOR to the flag</p>
-                        <p id="hint10"> the answer is in the hint above. KISS BRUH:) </p> 
-						<a href="writeup.php" class="button primary scrolly" id="hint11">Want to see full write ups?</a>
-					</div>
+                        <iframe src="https://www.youtube.com/embed/GWE5mJEIJM0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p>Vurnability covered: <a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Insecure_Direct_Object_References">"insecure direct object references"</a></p>
+                        <p>Tools used: <a href="https://github.com/KajanM/DirBuster">DirBuster</a>, <a href="https://chrome.google.com/webstore/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm">Cookie editor chrome extension</a></p>
+                    </div>
 				</div>
 			</section>
 		<!-- Scripts -->
@@ -94,7 +91,8 @@ include("web_config.php");
                 }
                 function getHint(){
                     if(localStorage.getItem("hints") < 12){
-					document.getElementById("hint"+(parseInt(localStorage.getItem("hints"))+1).toString()).style.display = "block";
+                    document.getElementById("hint"+(parseInt(localStorage.getItem("hints"))+1).toString()).style.display = "block";
+                    <?php $_SESSION['hints'] +=1; ;?> 
                     localStorage.setItem("hints",parseInt(localStorage.getItem("hints"))+1);
                     }
                 }

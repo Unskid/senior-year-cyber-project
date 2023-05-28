@@ -14,9 +14,10 @@ include("web_config.php");
 		<!-- Header -->
 			<section id="header">
 				<header class="major">
-					<h1>Your Points : <?php echo $_SESSION['points'] - ($_SESSION['hints'] * 5);?></h1>
+
+					<h1 id="points">Your Points : </h1>
                     <p>Flag1 : <?php echo $_SESSION['flags'][0] ?> | Flag2: <?php echo $_SESSION['flags'][1] ?> | Flag3: <?php echo $_SESSION['flags'][2] ?> | Flag4: <?php echo $_SESSION['flags'][3] ?></p>
-                    <p><a href="hints.php">Hints taken</a> : <?php echo $_SESSION['hints']; ?></p>
+                    <p id="taken">Hints taken: </p>
                 </header>
                 <div class="container">
 					<ul class="actions special">
@@ -33,6 +34,11 @@ include("web_config.php");
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				var points = <?php echo $_SESSION['points']; ?>;
+				var bad_points = localStorage.getItem("hints") * 5;
+				document.getElementById("points").innerHTML = "Your Points: " + (points - bad_points);
+				document.getElementById("taken").innerHTML = "Hints taken: "+ localStorage.getItem("hints");
+			</script>
 	</body>
 </html>

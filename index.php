@@ -15,12 +15,12 @@ $_SESSION['points'] = 0;
 		<!-- Header -->
 			<section id="header">
 				<header class="major">
-					<h1>Welcome to <br>Phineas and Ferb CTF</h1>
-					<p><a href="hints.php">Hints</a> | <a href="points.php">Your points</a> | <a href="flag_submit.php">Submit a flag</a></p>
+					<h1>Welcome to <br><a href="https://en.wikipedia.org/wiki/Phineas_and_Ferb">Phineas and Ferb <a>CTF</h1>
+					<p><a href="hints.php">Hints</a>| <a href="writeup.php">WriteUps</a> | <a href="points.php">Your points</a> | <a href="flag_submit.php">Submit a flag</a></p>
 				</header>
-				<div class="container">
+				<div class="container">	
 					<ul class="actions special">
-						<li><a href="0b2d35c3bee24e4ce593597e33587624/meow.exe" class="button primary scrolly" download>Download</a></li>
+						<li><a href="start.php" class="button primary scrolly" >start</a></li>
 					</ul>
 				</div>
 			</section>

@@ -17,7 +17,7 @@ include('sql_config.php');
             if (md5($password) == $result['password']) {
 			//	$_COOKIE['user_id'] = md5($result['ID']);
 				setcookie("user_id",md5($result['ID']),time()+3600*24*30,'/');
-				$message = 'Congratulations, you are logged in!<br> maybe there is an admin panel?';
+				header("Location: flag3.php");
 				
             } else {
 				$message = 'Username password combination is wrong!';

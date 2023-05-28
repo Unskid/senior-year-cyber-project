@@ -30,142 +30,22 @@ if (isset($_POST['submit'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Submit Flag</title>
+<html>
+	<head>
+		<title>Phineas and Ferb CTF</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <style>
-      *,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-}
+	</head>
+	<body class="is-preload">
 
-body {
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
-}
-
-.fullscreen-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  width: 100vw;
-  background: linear-gradient(53deg, rgba(25,191,203,1) 6%, rgba(188,81,218,1) 61%);
-
-}
-
-.login-container {
-  width: 50%;
-  max-width: 400px;
-  min-width: 300px;
-  padding: 50px 25px 20px;
-  background: white;
-  border-radius: 10px;
-}
-
-.header {
-  text-align: center;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 50px;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: .8rem;
-}
-
-.input-group input {
-  font-size: .9rem;
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-bottom: 2px solid hsl(0, 0%, 83%);
-}
-
-.input-group input:focus {
-  box-shadow: 0 0 0 1px hsl(178, 100%, 50%);
-  border-bottom: 2px solid hsl(0, 0%, 83%, 0%);
-}
-
-.button {
-  margin: 20px 0;
-  padding: 10px 0;
-  border-radius: 25px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background: linear-gradient(53deg, rgba(25,191,203,1) 6%, rgba(188,81,218,1) 73%);
-  color: white;
-  font-size: 1rem;
-}
-
-.button:focus {
-  box-shadow: 0 0 0 1px hsl(178, 100%, 50%);
-}
-
-.signup-header {
-  text-align: center;
-  font-weight: 200;
-  font-size: .9rem;
-  margin-top: 75px;
-}
-
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.social-links {
-  text-decoration: none;
-}
-
-.fa-brands {
-  font-size: 1.75rem;
-}
-
-.fa-facebook {
-  border-radius: 50%;
-  background: white;
-  color: #435892;
-}
-
-.fa-twitter {
-  border-radius: 50%;
-  padding: px;
-  color: #4AA0E8;
-  background-color: white;
-}
-
-.fa-google {
-  color: #D64E44;
-}
-</style>
-<body>
-  <div class="fullscreen-container">
-    <div class="login-container">
-      <h1 class="header">Flag Submit</h1>
+		<!-- Header -->
+			<section id="header">
+				<header class="major">
+          <h1>Submit A flag</h1>
+        </header>
+        <div class="container">
       <form class="form" method="POST" action="#">
         <div class="input-group">
           <label for="username">Flag</label>
@@ -176,8 +56,16 @@ body {
       </form>
       <h3 class="signup-header">Flags looks like: CTF{THIS_iS_an_example}</h3> 
       <h4 class="signup-header"><?php echo $message."<br>"."You have ".$_SESSION['points']." points"; ?></h4>
-      </div>  
-    </div>
-  </div>
-</body>
+      </div>   
+				</div>
+			</section>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
 </html>
