@@ -1,0 +1,10 @@
+e:\Users\Admin\Desktop\ransomeware\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+e:\Users\Admin\Desktop\ransomeware\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+e:\Users\Admin\Desktop\ransomeware\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+e:\Users\Admin\Desktop\ransomeware\WindowsFormsApp1\obj\Debug\EncrypterPOC.csprojAssemblyReference.cache
+e:\Users\Admin\Desktop\ransomeware\WindowsFormsApp1\obj\Debug\RansomwarePOC.Form1.resources
+e:\Users\Admin\Desktop\ransomeware\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+e:\Users\Admin\Desktop\ransomeware\WindowsFormsApp1\obj\Debug\EncrypterPOC.csproj.GenerateResource.cache
+e:\Users\Admin\Desktop\ransomeware\WindowsFormsApp1\obj\Debug\EncrypterPOC.csproj.CoreCompileInputs.cache
+e:\Users\Admin\Desktop\ransomeware\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+e:\Users\Admin\Desktop\ransomeware\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
